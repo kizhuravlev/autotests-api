@@ -3,6 +3,7 @@ from typing import TypedDict
 from httpx import Response
 
 from httpx_module.clients.api_client import APIClient
+from httpx_module.clients.public_http_builder import get_public_http_client
 
 class LoginRequestDict(TypedDict):
     """
@@ -42,6 +43,12 @@ class AuthClient(APIClient):
     
 
 
-    
+def get_auth_client() -> AuthClient:
+    """
+    Функция настраивает готовый AuthClient
+
+    :return: Возвращается готовый AuthClient
+    """
+    return AuthClient(client=get_public_http_client())  
 
 
