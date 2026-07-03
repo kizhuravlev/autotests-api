@@ -1,0 +1,25 @@
+from httpx_module.clients.users.public_users_client import get_public_users_client, CreateUserRequestDict
+from httpx_module.clients.users.private_users_client import get_private_users_client, LoginRequestDict
+from httpx_module.tools.fakers import random_user_email
+
+public_user_client = get_public_users_client()
+
+create_user_request = CreateUserRequestDict(
+    email = random_user_email(),
+    password = "Password123!",
+    lastName = "string",
+    firstName = "string",
+    middleName = "string",
+) 
+
+create_user_data = public_user_client.create_user(create_user_request)
+print(f"Create user data: {create_user_data}")
+
+login_user_request = LoginRequestDict(
+    email = create_user_request["email"],
+    password = create_user_request["password"]
+)
+private_user_client = get_private_users_client(user=login_user_request)
+get_user_data = private_user_client.get_user(create_user_data['user']['id'])
+print(f"Get user data: {get_user_data}")
+
