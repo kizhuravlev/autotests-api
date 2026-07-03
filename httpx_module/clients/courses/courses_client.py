@@ -1,4 +1,6 @@
 from httpx_module.clients.api_client import APIClient
+from httpx_module.clients.auth.auth_client import LoginRequestDict
+from httpx_module.clients.private_http_builder import get_private_http_client
 
 from httpx import Response
 
@@ -83,3 +85,11 @@ class CoursesClient(APIClient):
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.delete(f"/api/v1/courses/{course_id}")
+    
+def get_courses_client(user: LoginRequestDict) -> CoursesClient:
+    """
+    Функция создает и настраивает готовый CoursesClient
+
+    :return: Возвращает готовый и настроенный CoursesClient
+    """
+    return CoursesClient(client=get_private_http_client(user=user))
