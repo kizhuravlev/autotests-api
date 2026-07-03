@@ -18,6 +18,20 @@ class RefreshTokenDict(TypedDict):
     """
     refreshToken: str
 
+class TokenDict(TypeError):
+    """
+    Описание структуры ответа токена
+    """
+    tokenType: str
+    accessToken: str
+    refreshToken: str
+
+class LoginResponseDict(TypedDict):
+    """
+    Описание структуры ответа на аутентификацию
+    """
+    token: TokenDict
+
 class AuthClient(APIClient):
     """
     Клиент для работы с /api/v1/authentication
@@ -40,6 +54,10 @@ class AuthClient(APIClient):
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.post("/api/v1/authentication/refresh", json=request)
+    
+    def login(self, request: LoginRequestDict) -> LoginResponseDict:
+        response = self.login_api(request=request)
+        return response.json()
     
 
 
