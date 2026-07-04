@@ -1,3 +1,4 @@
+from httpx_module.clients.users.private_users_client import LoginRequestDict
 from httpx_module.clients.users.public_users_client import get_public_users_client, CreateUserRequestDict
 from httpx_module.tools.fakers import random_user_email
 from httpx_module.clients.files.files_client import get_files_client, CreateFileRequestDict
