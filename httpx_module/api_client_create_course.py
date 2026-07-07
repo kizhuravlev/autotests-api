@@ -2,7 +2,8 @@ from httpx_module.clients.auth.auth_client import LoginRequestSchema
 from httpx_module.clients.users.users_schema import CreateUserRequestSchema
 from httpx_module.clients.users.public_users_client import get_public_users_client
 from httpx_module.tools.fakers import random_user_email
-from httpx_module.clients.files.files_client import get_files_client, CreateFileRequestDict
+from httpx_module.clients.files.files_client import get_files_client
+from httpx_module.clients.files.files_schema import CreateFileRequestSchema
 from httpx_module.clients.courses.courses_client import get_courses_client, CreateCoursesRequestDict
 
 public_users_client = get_public_users_client()
@@ -23,7 +24,7 @@ user = LoginRequestSchema(
 )
 
 create_files_client = get_files_client(user)
-create_files_request = CreateFileRequestDict(
+create_files_request = CreateFileRequestSchema(
     filename="file",
     directory='files',
     upload_file='./testdata/files/image.png',
@@ -38,8 +39,8 @@ create_course_request = CreateCoursesRequestDict(
     minScore=1,
     description="Python API Course",
     estimatedTime="100 days",
-    previewFileId=create_files_data["file"]["id"],
-    createdByUserId=create_user_data["user"]["id"],
+    previewFileId=create_files_data.file.id,
+    createdByUserId=create_user_data.user.id,
 )
 create_course_data = create_course_client.create_course(create_course_request)
 print(f"Create course data: {create_course_data}")
