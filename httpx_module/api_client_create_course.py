@@ -1,23 +1,25 @@
-from httpx_module.clients.users.private_users_client import LoginRequestSchema
-from httpx_module.clients.users.public_users_client import get_public_users_client, CreateUserRequestDict
+from httpx_module.clients.auth.auth_client import LoginRequestSchema
+from httpx_module.clients.users.users_schema import CreateUserRequestSchema
+from httpx_module.clients.users.public_users_client import get_public_users_client
 from httpx_module.tools.fakers import random_user_email
 from httpx_module.clients.files.files_client import get_files_client, CreateFileRequestDict
 from httpx_module.clients.courses.courses_client import get_courses_client, CreateCoursesRequestDict
 
 public_users_client = get_public_users_client()
-create_user_request = CreateUserRequestDict(
+
+create_user_request = CreateUserRequestSchema(
     email=random_user_email(),
     password="Password123!",
-    lastName="string",
-    firstName="string",
-    middleName="string",
+    last_name="string",
+    first_name="string",
+    middle_name="string",
 )
 create_user_data = public_users_client.create_user(create_user_request)
 print(f"Create user data: {create_user_data}")
 
 user = LoginRequestSchema(
-    email=create_user_request["email"],
-    password=create_user_request["password"],
+    email=create_user_request.email,
+    password=create_user_request.password,
 )
 
 create_files_client = get_files_client(user)
