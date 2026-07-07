@@ -1,6 +1,6 @@
 from httpx_module.clients.api_client import APIClient
 from httpx_module.clients.private_http_builder import get_private_http_client
-from httpx_module.clients.auth.auth_client import LoginRequestDict
+from httpx_module.clients.auth.auth_client import LoginRequestSchema
 
 from httpx import Response
 
@@ -153,7 +153,7 @@ class ExercisesClient(APIClient):
         response = self.update_exercise_api(exercise_id=exercise_id, request=request)
         return response.json()
     
-def get_exercises_client(user: LoginRequestDict) -> ExercisesClient:
+def get_exercises_client(user: LoginRequestSchema) -> ExercisesClient:
     """
     Функция создания готового к использованию ExercisesClient
 

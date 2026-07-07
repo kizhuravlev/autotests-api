@@ -1,5 +1,5 @@
 from httpx_module.clients.api_client import APIClient
-from httpx_module.clients.auth.auth_client import LoginRequestDict
+from httpx_module.clients.auth.auth_client import LoginRequestSchema
 from httpx_module.clients.private_http_builder import get_private_http_client
 from httpx_module.clients.files.files_client import File
 from httpx_module.clients.users.private_users_client import User
@@ -116,7 +116,7 @@ class CoursesClient(APIClient):
         response = self.create_courses_api(request)
         return response.json()
     
-def get_courses_client(user: LoginRequestDict) -> CoursesClient:
+def get_courses_client(user: LoginRequestSchema) -> CoursesClient:
     """
     Функция создает и настраивает готовый CoursesClient
 

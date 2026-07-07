@@ -4,7 +4,7 @@ from httpx import Response
 
 from httpx_module.clients.api_client import APIClient
 from httpx_module.clients.private_http_builder import get_private_http_client
-from httpx_module.clients.auth.auth_client import LoginRequestDict
+from httpx_module.clients.auth.auth_client import LoginRequestSchema
 
 class UpdateUserRequestDict(TypedDict):
     """
@@ -82,7 +82,7 @@ class PrivateUsersClient(APIClient):
         response = self.get_user_api(user_id)
         return response.json()
     
-def get_private_users_client(user: LoginRequestDict) -> PrivateUsersClient:
+def get_private_users_client(user: LoginRequestSchema) -> PrivateUsersClient:
     """
     Функция для создания настроенного PrivateUsersClient
 

@@ -1,5 +1,5 @@
 from httpx_module.clients.api_client import APIClient
-from httpx_module.clients.auth.auth_client import LoginRequestDict
+from httpx_module.clients.auth.auth_client import LoginRequestSchema
 from httpx_module.clients.private_http_builder import get_private_http_client
 
 from typing import TypedDict
@@ -72,7 +72,7 @@ class FilesClient(APIClient):
         response = self.create_file_api(request)
         return response.json()
     
-def get_files_client(user: LoginRequestDict) -> FilesClient:
+def get_files_client(user: LoginRequestSchema) -> FilesClient:
     """
     Функция создает и настраивает готовый FilesClient
 
