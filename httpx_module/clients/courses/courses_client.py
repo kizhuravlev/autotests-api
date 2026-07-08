@@ -65,7 +65,7 @@ class CoursesClient(APIClient):
 
         :return: Возвращает данные созданного курса в json()
         """
-        response = self.create_courses_api(request)
+        response = self.create_course_api(request)
         return CreateCourseResponseSchema.model_validate_json(response.text)
     
 def get_courses_client(user: LoginRequestSchema) -> CoursesClient:

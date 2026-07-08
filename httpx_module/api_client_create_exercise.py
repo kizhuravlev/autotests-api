@@ -1,11 +1,18 @@
+from httpx_module.tools.fakers import random_user_email
+
 from httpx_module.clients.auth.auth_schema import LoginRequestSchema
+
 from httpx_module.clients.users.public_users_client import get_public_users_client
 from httpx_module.clients.users.users_schema import CreateUserRequestSchema
-from httpx_module.tools.fakers import random_user_email
+
 from httpx_module.clients.files.files_client import get_files_client
 from httpx_module.clients.files.files_schema import CreateFileRequestSchema
-from httpx_module.clients.courses.courses_client import get_courses_client, CreateCoursesRequestDict
-from httpx_module.clients.exercises.exercises_client import get_exercises_client, CreateExerciseRequestDict
+
+from httpx_module.clients.courses.courses_client import get_courses_client
+from httpx_module.clients.courses.courses_schema import CreateCourseRequestSchema
+
+from httpx_module.clients.exercises.exercises_client import get_exercises_client
+from httpx_module.clients.exercises.exercises_schema import CreateExerciseRequestSchema
 
 public_user_client = get_public_users_client()
 
@@ -35,26 +42,26 @@ files_request = CreateFileRequestSchema(
 files_response = files_client.create_file(files_request)
 print(f"Create file data: {files_response}")
 
-courses_request = CreateCoursesRequestDict(
+courses_request = CreateCourseRequestSchema(
     title="Course",
-    maxScore=100,
-    minScore=1,
+    max_score=100,
+    min_score=1,
     description="Description about course",
-    estimatedTime="2 weeks",
-    previewFileId=files_response.file.id,
-    createdByUserId=create_user_response.user.id
+    estimated_time="2 weeks",
+    preview_file_id=files_response.file.id,
+    created_by_user_id=create_user_response.user.id
 )
 courses_response = courses_client.create_course(courses_request)
 print(f"Create course data: {courses_response}")
 
-exercise_request = CreateExerciseRequestDict(
+exercise_request = CreateExerciseRequestSchema(
     title="Exercise",
-    courseId=courses_response["course"]["id"],
-    maxScore=100,
-    minScore=1,
-    orderIndex=1,
+    course_id=courses_response.course.id,
+    max_score=100,
+    min_score=1,
+    order_index=1,
     description="Description",
-    estimatedTime="2 weeks",
+    estimated_time="2 weeks",
 )
 exercise_response = exercises_client.create_exercise(exercise_request)
 print(f"Create exercise data {exercise_response}")

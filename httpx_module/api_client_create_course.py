@@ -1,10 +1,13 @@
-from httpx_module.clients.auth.auth_client import LoginRequestSchema
+from httpx_module.clients.auth.auth_schema import LoginRequestSchema
 from httpx_module.clients.users.users_schema import CreateUserRequestSchema
 from httpx_module.clients.users.public_users_client import get_public_users_client
 from httpx_module.tools.fakers import random_user_email
+
 from httpx_module.clients.files.files_client import get_files_client
 from httpx_module.clients.files.files_schema import CreateFileRequestSchema
-from httpx_module.clients.courses.courses_client import get_courses_client, CreateCoursesRequestDict
+
+from httpx_module.clients.courses.courses_client import get_courses_client
+from httpx_module.clients.courses.courses_schema import CreateCourseRequestSchema
 
 public_users_client = get_public_users_client()
 
@@ -33,14 +36,14 @@ create_files_data = create_files_client.create_file(create_files_request)
 print(f"Create files data: {create_files_data}")
 
 create_course_client = get_courses_client(user)
-create_course_request = CreateCoursesRequestDict(
+create_course_request = CreateCourseRequestSchema(
     title="Python",
-    maxScore=100,
-    minScore=1,
+    max_score=100,
+    min_score=1,
     description="Python API Course",
-    estimatedTime="100 days",
-    previewFileId=create_files_data.file.id,
-    createdByUserId=create_user_data.user.id,
+    estimated_time="100 days",
+    preview_file_id=create_files_data.file.id,
+    created_by_user_id=create_user_data.user.id,
 )
 create_course_data = create_course_client.create_course(create_course_request)
 print(f"Create course data: {create_course_data}")

@@ -1,5 +1,6 @@
-from httpx_module.clients.users.public_users_client import get_public_users_client
 from httpx_module.clients.auth.auth_schema import LoginRequestSchema
+
+from httpx_module.clients.users.public_users_client import get_public_users_client
 from httpx_module.clients.users.private_users_client import get_private_users_client
 from httpx_module.clients.users.users_schema import CreateUserRequestSchema
 
