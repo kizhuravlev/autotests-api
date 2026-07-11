@@ -1,4 +1,4 @@
-from httpx_module.tools.fakers import random_user_email
+from httpx_module.tools.fakers import fake
 
 from httpx_module.clients.auth.auth_schema import LoginRequestSchema
 
@@ -17,7 +17,7 @@ from httpx_module.clients.exercises.exercises_schema import CreateExerciseReques
 public_user_client = get_public_users_client()
 
 create_user_request = CreateUserRequestSchema(
-    email=random_user_email(),
+    email=fake.email(),
     password="Password123",
     last_name="lastName",
     first_name="firstName",

@@ -1,5 +1,5 @@
 import httpx
-from httpx_module.tools.fakers import random_user_email
+from httpx_module.tools.fakers import fake
 from httpx_module.tools.urls import (
     BASE_URL,
     AUTH_ROUTE,
@@ -7,7 +7,7 @@ from httpx_module.tools.urls import (
 )
 
 create_user_payload = {
-  "email": random_user_email(),
+  "email": fake.email(),
   "password": "string",
   "lastName": "string",
   "firstName": "string",
@@ -36,7 +36,7 @@ update_user_headers = {
 }
 
 update_user_payload = {
-  "email": random_user_email(),
+  "email": fake.email(),
   "lastName": "newString",
   "firstName": "newString",
   "middleName": "newString"

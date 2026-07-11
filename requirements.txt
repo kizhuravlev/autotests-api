@@ -1,0 +1,4 @@
+httpx>=0.28,<0.29
+pydantic[email]>=2,<3
+jsonschema>=4.23,<5
+faker>=40.28.1

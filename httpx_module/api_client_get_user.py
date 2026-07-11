@@ -4,17 +4,9 @@ from httpx_module.clients.users.public_users_client import get_public_users_clie
 from httpx_module.clients.users.private_users_client import get_private_users_client
 from httpx_module.clients.users.users_schema import CreateUserRequestSchema
 
-from httpx_module.tools.fakers import random_user_email
-
 public_user_client = get_public_users_client()
 
-create_user_request = CreateUserRequestSchema(
-    email = random_user_email(),
-    password = "Password123!",
-    last_name = "string",
-    first_name = "string",
-    middle_name = "string",
-) 
+create_user_request = CreateUserRequestSchema() 
 
 create_user_data = public_user_client.create_user(create_user_request)
 print(f"Create user data: {create_user_data}")

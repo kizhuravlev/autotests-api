@@ -2,13 +2,13 @@ import jsonschema
 
 from httpx_module.clients.users.public_users_client import get_public_users_client
 from httpx_module.clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
-from httpx_module.tools.fakers import random_user_email
+from httpx_module.tools.fakers import fake
 from httpx_module.tools.assertions.schema import validate_json_schema
 
 public_users_client = get_public_users_client()
 
 create_user_request = CreateUserRequestSchema(
-    email=random_user_email(),
+    email=fake.email(),
     password="string",
     last_name="string",
     first_name="string",
