@@ -1,0 +1,21 @@
+from http import HTTPStatus
+
+from httpx_module.clients.users.public_users_client import get_public_users_client
+from httpx_module.pydantic_create_user import CreateUserRequestSchema, CreateUserResponseSchema
+
+from httpx_module.tools.assertions.schema import validate_json_schema
+from httpx_module.tools.assertions.base import assert_status_code
+from httpx_module.tools.assertions.users import assert_create_user_response
+
+
+def test_create_user():
+    public_user_client = get_public_users_client()
+
+    request = CreateUserRequestSchema()
+    response = public_user_client.create_user_api(request)
+    response_data = CreateUserResponseSchema.model_validate_json(response.text)
+
+    assert_status_code(response.status_code, HTTPStatus.OK)
+    assert_create_user_response(request, response_data)
+
+    validate_json_schema(response.json(), response_data.model_json_schema())
