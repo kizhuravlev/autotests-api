@@ -1,5 +1,7 @@
 from http import HTTPStatus
 
+import pytest
+
 from httpx_module.clients.users.public_users_client import get_public_users_client
 from httpx_module.pydantic_create_user import CreateUserRequestSchema, CreateUserResponseSchema
 
@@ -7,7 +9,8 @@ from httpx_module.tools.assertions.schema import validate_json_schema
 from httpx_module.tools.assertions.base import assert_status_code
 from httpx_module.tools.assertions.users import assert_create_user_response
 
-
+@pytest.mark.users
+@pytest.mark.regression
 def test_create_user():
     public_user_client = get_public_users_client()
 

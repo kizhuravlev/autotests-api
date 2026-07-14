@@ -1,5 +1,7 @@
 from http import HTTPStatus
 
+import pytest
+
 from httpx_module.clients.auth.auth_schema import LoginRequestSchema, LoginResponseSchema
 from httpx_module.clients.users.public_users_client import get_public_users_client
 from httpx_module.clients.users.users_schema import CreateUserRequestSchema
@@ -8,6 +10,9 @@ from httpx_module.tools.assertions.authentication import assert_login_response
 from httpx_module.tools.assertions.base import assert_status_code
 from httpx_module.tools.assertions.schema import validate_json_schema
 
+
+@pytest.mark.regression
+@pytest.mark.authentication
 def test_login():
     public_user_client = get_public_users_client()
     auth_client = get_auth_client()
