@@ -1,3 +1,4 @@
+import email
 from http import HTTPStatus
 
 import pytest
@@ -10,12 +11,17 @@ from httpx_module.pydantic_create_user import CreateUserRequestSchema, CreateUse
 from httpx_module.tools.assertions.schema import validate_json_schema
 from httpx_module.tools.assertions.base import assert_status_code
 from httpx_module.tools.assertions.users import assert_create_user_response, assert_get_user_response
+from httpx_module.tools.fakers import fake
+
 from fixtures.users import UserFixture
+
 
 @pytest.mark.users
 @pytest.mark.regression
-def test_create_user(public_users_client: PublicUsersClient):
-    request = CreateUserRequestSchema()
+@pytest.mark.parametrize("domain", ["mail.ru", "gmail.com", "example.com"])
+def test_create_user(domain: str, public_users_client: PublicUsersClient):
+    request = CreateUserRequestSchema(email=fake.email(domain=domain))
+    print(request.email)
     response = public_users_client.create_user_api(request)
     response_data = CreateUserResponseSchema.model_validate_json(response.text)
 
