@@ -6,7 +6,6 @@ from httpx_module.clients.auth.auth_schema import LoginRequestSchema
 from httpx_module.clients.users.private_users_client import PrivateUsersClient, get_private_users_client
 from httpx_module.clients.users.public_users_client import PublicUsersClient, get_public_users_client
 from httpx_module.clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
-from httpx_module.clients.auth.auth_client import AuthClient, get_auth_client
 
 class UserFixture(BaseModel):
     request: CreateUserRequestSchema
@@ -31,10 +30,6 @@ def public_users_client() -> PublicUsersClient:
 @pytest.fixture
 def private_users_client(function_user: UserFixture) -> PrivateUsersClient:
     return get_private_users_client(user=function_user.authentication_user)
-
-@pytest.fixture
-def authentication_client() -> AuthClient:
-    return get_auth_client()
 
 @pytest.fixture
 def function_user(public_users_client: PublicUsersClient) -> UserFixture:

@@ -10,7 +10,7 @@ from httpx_module.pydantic_create_user import CreateUserRequestSchema, CreateUse
 from httpx_module.tools.assertions.schema import validate_json_schema
 from httpx_module.tools.assertions.base import assert_status_code
 from httpx_module.tools.assertions.users import assert_create_user_response, assert_get_user_response
-from tests.conftest import UserFixture
+from fixtures.users import UserFixture
 
 @pytest.mark.users
 @pytest.mark.regression

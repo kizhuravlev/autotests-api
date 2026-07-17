@@ -2,7 +2,7 @@ from http import HTTPStatus
 
 import pytest
 
-from tests.conftest import UserFixture
+from fixtures.users import UserFixture
 
 from httpx_module.clients.auth.auth_schema import LoginRequestSchema, LoginResponseSchema
 from httpx_module.clients.users.public_users_client import get_public_users_client, PublicUsersClient
