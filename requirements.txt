@@ -3,3 +3,4 @@ pydantic[email]>=2,<3
 jsonschema>=4.23,<5
 faker>=40.28.1
 pytest>=9.1.1
+pytest-rerunfailures>=16.4
