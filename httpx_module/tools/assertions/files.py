@@ -1,8 +1,8 @@
 from httpx_module.clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, GetFileResponseSchema
-from httpx_module.clients.files.errors_schema import ValidationErrorSchema, ValidationErrorResponseSchema
+from httpx_module.clients.errors_schema import ValidationErrorSchema, ValidationErrorResponseSchema, InternalErrorResponseSchema
 from httpx_module.pydantic_basics import FileSchema
 from httpx_module.tools.assertions.base import assert_equal
-from httpx_module.tools.assertions.errors import assert_validation_response_error
+from httpx_module.tools.assertions.errors import assert_validation_response_error, assert_internal_error_response
 
 
 def assert_create_file_response(request: CreateFileRequestSchema, response: CreateFileResponseSchema):
@@ -69,3 +69,15 @@ def assert_create_file_with_empty_directory(actual: ValidationErrorResponseSchem
             ]
         )
     assert_validation_response_error(actual, expected)
+
+def assert_file_not_found_response(actual: InternalErrorResponseSchema):
+    """
+    Функция для проверки ошибки, если файл не найден на сервере.
+
+    :param actual: Фактический ответ.
+    :raises AssertionError: Если фактический ответ не соответствует ошибке "File not found"
+    """
+    expected = InternalErrorResponseSchema(detail="File not found")
+
+    assert_internal_error_response(actual, expected)
+    

@@ -5,9 +5,9 @@ from fixtures.files import FileFixture
 from fixtures.users import function_user
 from httpx_module.clients.files.files_client import FilesClient
 from httpx_module.clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, GetFileResponseSchema
-from httpx_module.clients.files.errors_schema import ValidationErrorResponseSchema
+from httpx_module.clients.errors_schema import ValidationErrorResponseSchema, InternalErrorResponseSchema
 from httpx_module.tools.assertions.base import assert_status_code
-from httpx_module.tools.assertions.files import assert_create_file_response, assert_get_file_response, assert_create_file_with_empty_directory, assert_create_file_with_empty_filename
+from httpx_module.tools.assertions.files import assert_create_file_response, assert_get_file_response, assert_create_file_with_empty_directory, assert_create_file_with_empty_filename, assert_file_not_found_response
 from httpx_module.tools.assertions.schema import validate_json_schema
 
 @pytest.mark.files
@@ -57,5 +57,19 @@ class TestFiles:
         assert_create_file_with_empty_directory(response_data)
 
         validate_json_schema(response.json(), response_data.model_json_schema())
+
+    def test_delete_file(self, files_client: FilesClient, function_files: FileFixture):
+        delete_response = files_client.delete_file_api(function_files.response.file.id)
+
+        assert_status_code(delete_response.status_code, HTTPStatus.OK)
+
+        get_response = files_client.get_file_api(function_files.response.file.id)
+        get_response_data = InternalErrorResponseSchema.model_validate_json(get_response.text)
+
+        assert_status_code(get_response.status_code, HTTPStatus.NOT_FOUND)
+        assert_file_not_found_response(get_response_data)
+
+        validate_json_schema(get_response.json(), get_response_data.model_json_schema())
+
 
         
