@@ -7,7 +7,7 @@ from httpx_module.clients.files.files_client import FilesClient
 from httpx_module.clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, GetFileResponseSchema
 from httpx_module.clients.errors_schema import ValidationErrorResponseSchema, InternalErrorResponseSchema
 from httpx_module.tools.assertions.base import assert_status_code
-from httpx_module.tools.assertions.files import assert_create_file_response, assert_get_file_response, assert_create_file_with_empty_directory, assert_create_file_with_empty_filename, assert_file_not_found_response
+from httpx_module.tools.assertions.files import assert_create_file_response, assert_get_file_response, assert_create_file_with_empty_directory, assert_create_file_with_empty_filename, assert_file_not_found_response, assert_get_file_with_incorrect_file_id
 from httpx_module.tools.assertions.schema import validate_json_schema
 
 @pytest.mark.files
@@ -71,5 +71,13 @@ class TestFiles:
 
         validate_json_schema(get_response.json(), get_response_data.model_json_schema())
 
+    def test_get_file_with_incorrect_id(self, files_client: FilesClient):
+        response = files_client.get_file_api("incorrect-file-id")
+        response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
 
+        assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
+        assert_get_file_with_incorrect_file_id(response_data)
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+        
         
