@@ -1,6 +1,8 @@
 from httpx_module.clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, GetFileResponseSchema
+from httpx_module.clients.files.errors_schema import ValidationErrorSchema, ValidationErrorResponseSchema
 from httpx_module.pydantic_basics import FileSchema
 from httpx_module.tools.assertions.base import assert_equal
+from httpx_module.tools.assertions.errors import assert_validation_response_error
 
 
 def assert_create_file_response(request: CreateFileRequestSchema, response: CreateFileResponseSchema):
@@ -39,3 +41,31 @@ def assert_get_file_response(get_file_response: GetFileResponseSchema, create_fi
     :raises AssertionError: Если данные файла не совпадают.
     """
     assert_file(get_file_response.file, create_file_response.file)
+
+def assert_create_file_with_empty_filename(actual: ValidationErrorResponseSchema):
+    expected = ValidationErrorResponseSchema(
+        details=[
+            ValidationErrorSchema(
+                type="string_too_short",
+                location=["body", "filename"],
+                message="String should have at least 1 character",
+                input="",
+                context={"min_length": 1}
+            )
+        ]
+    )
+    assert_validation_response_error(actual, expected)
+
+def assert_create_file_with_empty_directory(actual: ValidationErrorResponseSchema):
+    expected = ValidationErrorResponseSchema(
+            details=[
+                ValidationErrorSchema(
+                    type="string_too_short",
+                    location=["body", "directory"],
+                    message="String should have at least 1 character",
+                    input="",
+                    context={"min_length": 1}
+                )
+            ]
+        )
+    assert_validation_response_error(actual, expected)
