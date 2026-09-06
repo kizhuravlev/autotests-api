@@ -3,11 +3,12 @@ import pytest
 from fixtures.courses import CourseFixture
 from fixtures.users import UserFixture
 from httpx_module.clients.courses.courses_client import CoursesClient
-from httpx_module.clients.courses.courses_schema import UpdateCourseRequestSchema, UpdateCourseResponseSchema
+from httpx_module.clients.courses.courses_schema import UpdateCourseRequestSchema, UpdateCourseResponseSchema, \
+    GetCoursesQuerySchema, GetCoursesResponseSchema
 from httpx_module.tools.assertions.base import assert_status_code
 from http import HTTPStatus
 
-from httpx_module.tools.assertions.course import assert_update_course_response
+from httpx_module.tools.assertions.course import assert_update_course_response, assert_get_courses_response
 from httpx_module.tools.assertions.schema import validate_json_schema
 
 
@@ -24,3 +25,12 @@ class TestCourses:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    def test_get_courses(self, courses_client: CoursesClient, function_course: CourseFixture, function_user: UserFixture):
+        query = GetCoursesQuerySchema(user_id=function_user.response.user.id)
+        response = courses_client.get_courses_api(query)
+        response_data = GetCoursesResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.OK)
+        assert_get_courses_response(response_data, [function_course.response])
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
