@@ -1,5 +1,5 @@
 from httpx_module.clients.courses.courses_schema import UpdateCourseResponseSchema, UpdateCourseRequestSchema, \
-    CourseSchema, GetCoursesResponseSchema, CreateCourseResponseSchema
+    CourseSchema, GetCoursesResponseSchema, CreateCourseResponseSchema, CreateCourseRequestSchema
 from httpx_module.tools.assertions.base import assert_equal, assert_length
 from httpx_module.tools.assertions.files import assert_file
 from httpx_module.tools.assertions.users import assert_user
@@ -60,6 +60,22 @@ def assert_get_courses_response(get_courses_response: GetCoursesResponseSchema, 
 
     for index, create_course_response in enumerate(create_course_responses):
         assert_course(get_courses_response.courses[index], create_course_response.course)
+
+def assert_create_course_response(request: CreateCourseRequestSchema, response: CreateCourseResponseSchema):
+    """
+    Проверяет, что ответ на создание курса соответствует запросу.
+
+    :param request: Запрос к API при создании курса.
+    :param response: Ответ API при создании курса.
+    :raises AssertionError: Если данные курсов не совпадают.
+    """
+    assert_equal(response.course.title, request.title, "title")
+    assert_equal(response.course.max_score, request.max_score, "max_score")
+    assert_equal(response.course.min_score, request.min_score, "min_score")
+    assert_equal(response.course.description, request.description, "description")
+    assert_equal(response.course.preview_file.id, request.preview_file_id, "preview_file_id")
+    assert_equal(response.course.estimated_time, request.estimated_time, "estimated_time")
+    assert_equal(response.course.created_by_user.id, request.created_by_user_id, "created_by_user_id")
 
 
 
