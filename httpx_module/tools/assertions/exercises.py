@@ -1,6 +1,8 @@
+from httpx_module.clients.errors_schema import InternalErrorResponseSchema
 from httpx_module.clients.exercises.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema, \
     ExerciseSchema, GetExerciseResponseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
 from httpx_module.tools.assertions.base import assert_equal
+from httpx_module.tools.assertions.errors import assert_internal_error_response
 
 
 def assert_create_exercise_response(request: CreateExerciseRequestSchema, response: CreateExerciseResponseSchema):
@@ -61,4 +63,14 @@ def assert_update_exercise_response(request: UpdateExerciseRequestSchema, respon
     assert_equal(response.exercise.order_index, request.order_index, "order_index")
     assert_equal(response.exercise.description, request.description, "description")
     assert_equal(response.exercise.estimated_time, request.estimated_time, "estimated_time")
+
+def assert_exercise_not_found(actual: InternalErrorResponseSchema):
+    """
+    Функция для проверки ошибки при получении несуществующего задания.
+
+    :param actual: Ответ от API при получении несуществующего задания.
+    :raises AssertionError: Если фактический ответ отличается от ожидаемого.
+    """
+    expected = InternalErrorResponseSchema(details="Exercise not found")
+    assert_internal_error_response(actual, expected)
 
