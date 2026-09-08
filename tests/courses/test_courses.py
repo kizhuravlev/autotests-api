@@ -1,6 +1,12 @@
 import pytest
 import allure
 
+from httpx_module.tools.allure.tags import AllureTag
+from httpx_module.tools.allure.epics import AllureEpic
+from httpx_module.tools.allure.features import AllureFeature
+from httpx_module.tools.allure.stories import AllureStory
+from allure_commons.types import Severity
+
 from fixtures.courses import CourseFixture
 from fixtures.files import FileFixture
 from fixtures.users import UserFixture
@@ -17,8 +23,14 @@ from httpx_module.tools.assertions.schema import validate_json_schema
 
 @pytest.mark.courses
 @pytest.mark.regression
+@allure.tag(AllureTag.REGRESSION, AllureTag.COURSES)
+@allure.epic(AllureEpic.LMS)
+@allure.feature(AllureFeature.COURSES)
 class TestCourses:
     @allure.title("Update course")
+    @allure.tag(AllureTag.UPDATE_ENTITY)
+    @allure.story(AllureStory.UPDATE_ENTITY)
+    @allure.severity(Severity.CRITICAL)
     def test_update_course(self, courses_client: CoursesClient, function_course: CourseFixture):
         request = UpdateCourseRequestSchema()
         response = courses_client.update_course_api(function_course.response.course.id, request)
@@ -30,6 +42,9 @@ class TestCourses:
         validate_json_schema(response.json(), response_data.model_json_schema())
 
     @allure.title("Get courses")
+    @allure.tag(AllureTag.GET_ENTITY)
+    @allure.story(AllureStory.GET_ENTITY)
+    @allure.severity(Severity.BLOCKER)
     def test_get_courses(self, courses_client: CoursesClient, function_course: CourseFixture, function_user: UserFixture):
         query = GetCoursesQuerySchema(user_id=function_user.response.user.id)
         response = courses_client.get_courses_api(query)
@@ -41,6 +56,9 @@ class TestCourses:
         validate_json_schema(response.json(), response_data.model_json_schema())
 
     @allure.title("Create course")
+    @allure.tag(AllureTag.CREATE_ENTITY)
+    @allure.story(AllureStory.CREATE_ENTITY)
+    @allure.severity(Severity.BLOCKER)
     def test_create_course(self, courses_client: CoursesClient, function_files: FileFixture, function_user: UserFixture):
         request = CreateCourseRequestSchema(
             preview_file_id=function_files.response.file.id,

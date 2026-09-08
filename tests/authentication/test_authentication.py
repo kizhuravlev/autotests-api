@@ -3,6 +3,12 @@ from http import HTTPStatus
 import pytest
 import allure
 
+from httpx_module.tools.allure.tags import AllureTag
+from httpx_module.tools.allure.epics import AllureEpic
+from httpx_module.tools.allure.features import AllureFeature
+from httpx_module.tools.allure.stories import AllureStory
+from allure_commons.types import Severity
+
 from fixtures.users import UserFixture
 
 from httpx_module.clients.auth.auth_schema import LoginRequestSchema, LoginResponseSchema
@@ -14,8 +20,13 @@ from httpx_module.tools.assertions.schema import validate_json_schema
 
 @pytest.mark.regression
 @pytest.mark.authentication
+@allure.tag(AllureTag.AUTHENTICATION, AllureTag.REGRESSION)
+@allure.epic(AllureEpic.LMS)
+@allure.feature(AllureFeature.AUTHENTICATION)
 class TestAuthentication:
+    @allure.story(AllureStory.LOGIN)
     @allure.title("Login user with valid credentials")
+    @allure.severity(Severity.BLOCKER)
     def test_login(self, function_user: UserFixture, authentication_client: AuthClient):
         login_request = LoginRequestSchema(email=function_user.email, password=function_user.password)
         login_response = authentication_client.login_api(login_request)
