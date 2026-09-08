@@ -1,6 +1,7 @@
 from http import HTTPStatus
 
 import pytest
+import allure
 
 from fixtures.users import UserFixture
 
@@ -14,6 +15,7 @@ from httpx_module.tools.assertions.schema import validate_json_schema
 @pytest.mark.regression
 @pytest.mark.authentication
 class TestAuthentication:
+    @allure.title("Login user with valid credentials")
     def test_login(self, function_user: UserFixture, authentication_client: AuthClient):
         login_request = LoginRequestSchema(email=function_user.email, password=function_user.password)
         login_response = authentication_client.login_api(login_request)

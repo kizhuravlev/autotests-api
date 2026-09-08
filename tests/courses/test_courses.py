@@ -1,4 +1,5 @@
 import pytest
+import allure
 
 from fixtures.courses import CourseFixture
 from fixtures.files import FileFixture
@@ -17,6 +18,7 @@ from httpx_module.tools.assertions.schema import validate_json_schema
 @pytest.mark.courses
 @pytest.mark.regression
 class TestCourses:
+    @allure.title("Update course")
     def test_update_course(self, courses_client: CoursesClient, function_course: CourseFixture):
         request = UpdateCourseRequestSchema()
         response = courses_client.update_course_api(function_course.response.course.id, request)
@@ -27,6 +29,7 @@ class TestCourses:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.title("Get courses")
     def test_get_courses(self, courses_client: CoursesClient, function_course: CourseFixture, function_user: UserFixture):
         query = GetCoursesQuerySchema(user_id=function_user.response.user.id)
         response = courses_client.get_courses_api(query)
@@ -37,6 +40,7 @@ class TestCourses:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.title("Create course")
     def test_create_course(self, courses_client: CoursesClient, function_files: FileFixture, function_user: UserFixture):
         request = CreateCourseRequestSchema(
             preview_file_id=function_files.response.file.id,
