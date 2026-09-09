@@ -1,6 +1,8 @@
 from httpx_module.clients.auth.auth_schema import LoginResponseSchema
 from httpx_module.tools.assertions.base import assert_equal, assert_is_true
+import allure
 
+@allure.step("Check login response")
 def assert_login_response(response: LoginResponseSchema):
     """
     Проверяет корректность ответа при успешной авторизации.
