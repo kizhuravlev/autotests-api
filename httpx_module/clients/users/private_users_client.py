@@ -5,11 +5,14 @@ from httpx_module.clients.private_http_builder import get_private_http_client
 from httpx_module.clients.auth.auth_schema import LoginRequestSchema
 from httpx_module.clients.users.users_schema import UpdateUserRequestSchema, GetUserResponseSchema
 
+import allure
+
 class PrivateUsersClient(APIClient):
     """
     Приватный клиент для работы с /api/v1/users
     """
 
+    @allure.step("Get user me")
     def get_user_me_api(self) -> Response:
         """
         Метод получения информации о пользователе
@@ -17,7 +20,8 @@ class PrivateUsersClient(APIClient):
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.get("/api/v1/users/me")
-    
+
+    @allure.step("Get user by id {user_id}")
     def get_user_api(self, user_id: str) -> Response:
         """
         Метод получения пользователя по идентификатору
@@ -26,7 +30,8 @@ class PrivateUsersClient(APIClient):
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.get(f"/api/v1/users/{user_id}")
-    
+
+    @allure.step("Update user by id {user_id}")
     def patch_user_api(self, user_id: str, request: UpdateUserRequestSchema) -> Response:
         """
         Метод частичного обновления пользователя по идентификатору
@@ -36,7 +41,8 @@ class PrivateUsersClient(APIClient):
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.patch(f"/api/v1/users/{user_id}", json=request.model_dump(by_alias=True))
-    
+
+    @allure.step("Delete user by id {user_id}")
     def delete_user_api(self, user_id: str) -> Response:
         """
         Метод удаления пользователя по идентификатору
