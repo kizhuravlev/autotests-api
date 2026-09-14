@@ -1,6 +1,8 @@
 from httpx import Client
 
 from httpx_module.clients.auth.auth_client import get_auth_client, LoginRequestSchema
+from httpx_module.clients.event_hooks import curl_event_hook
+
 
 def get_private_http_client(user: LoginRequestSchema) -> Client:
     
@@ -13,6 +15,7 @@ def get_private_http_client(user: LoginRequestSchema) -> Client:
         base_url="http://localhost:8000",
         headers= {
             "Authorization": f"Bearer {token}"
-        }
+        },
+        event_hooks={"request": [curl_event_hook]}
     )
     
