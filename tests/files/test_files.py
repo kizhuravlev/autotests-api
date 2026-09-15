@@ -10,13 +10,14 @@ from allure_commons.types import Severity
 from http import HTTPStatus
 
 from fixtures.files import FileFixture
-from fixtures.users import function_user
 from httpx_module.clients.files.files_client import FilesClient
 from httpx_module.clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, GetFileResponseSchema
 from httpx_module.clients.errors_schema import ValidationErrorResponseSchema, InternalErrorResponseSchema
 from httpx_module.tools.assertions.base import assert_status_code
 from httpx_module.tools.assertions.files import assert_create_file_response, assert_get_file_response, assert_create_file_with_empty_directory, assert_create_file_with_empty_filename, assert_file_not_found_response, assert_get_file_with_incorrect_file_id
 from httpx_module.tools.assertions.schema import validate_json_schema
+
+from config import settings
 
 @pytest.mark.files
 @pytest.mark.regression
@@ -32,7 +33,7 @@ class TestFiles:
     @allure.severity(Severity.BLOCKER)
     @allure.sub_suite(AllureStory.CREATE_ENTITY)
     def test_create_file(self, files_client: FilesClient, function_files: FileFixture):
-        request = CreateFileRequestSchema(upload_file="testdata/files/image.png")
+        request = CreateFileRequestSchema(upload_file=settings.test_data.image_png_file)
         response = files_client.create_file_api(request)
         response_data = CreateFileResponseSchema.model_validate_json(response.text)
 
@@ -63,7 +64,7 @@ class TestFiles:
     def test_create_file_with_empty_filename(self, files_client: FilesClient):
         request = CreateFileRequestSchema(
             filename="",
-            upload_file="./testdata/files/image.png"
+            upload_file=settings.test_data.image_png_file
         )
         response = files_client.create_file_api(request)
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
@@ -81,7 +82,7 @@ class TestFiles:
     def test_create_file_with_empty_directory(self, files_client: FilesClient):
         request = CreateFileRequestSchema(
             directory="",
-            upload_file="./testdata/files/image.png"
+            upload_file=settings.test_data.image_png_file
         )
         response = files_client.create_file_api(request)
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)

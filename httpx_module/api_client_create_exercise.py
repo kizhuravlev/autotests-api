@@ -1,3 +1,4 @@
+from config import settings
 from httpx_module.clients.auth.auth_schema import LoginRequestSchema
 
 from httpx_module.clients.users.public_users_client import get_public_users_client
@@ -26,7 +27,7 @@ files_client = get_files_client(login_request)
 courses_client = get_courses_client(login_request)
 exercises_client = get_exercises_client(login_request)
 
-files_request = CreateFileRequestSchema(upload_file="./testdata/files/image.png")
+files_request = CreateFileRequestSchema(upload_file=settings.test_data.image_png_file)
 files_response = files_client.create_file(files_request)
 print(f"Create file data: {files_response}")
 
