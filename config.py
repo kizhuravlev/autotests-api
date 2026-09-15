@@ -1,5 +1,5 @@
 from pydantic import BaseModel, HttpUrl, FilePath
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class HTTPClientConfig(BaseModel):
     url: HttpUrl
@@ -9,9 +9,17 @@ class HTTPClientConfig(BaseModel):
     def client_url(self) -> str:
         return str(self.url)
 
-class TestData(BaseModel):
+class TestDataConfig(BaseModel):
     image_png_file: FilePath
 
 class Settings(BaseSettings):
-    test_data: TestData
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_nested_delimiter=".",
+        env_file_encoding="utf-8",
+    )
+
+    test_data: TestDataConfig
     http_client: HTTPClientConfig
+
+settings = Settings()
