@@ -7,3 +7,4 @@ pytest-rerunfailures>=16.4
 allure-pytest>=2.16.0
 allure-python-commons>=2.16.0
 pydantic-settings>=2.15.0
+pytest-xdist>=3.8.0
