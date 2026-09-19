@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTE5VDE1OjU1OjQ2Ljc4Njk2OSIsInVzZXJfaWQiOiI0YzNiZTgyNy1jYTk5LTQ3MDAtYThhOS1iYjZmNjlhZjU3NzMifQ.MTYmR8vcn84kb7pxISqFkx2nsJqfn2gaFAmRk9vUySU' \
+  -H 'content-length: 266' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Situation bring eight because.","maxScore":100,"minScore":4,"description":"Especially history right bag style agree.","estimatedTime":"7 weeks","previewFileId":"001cd96a-d079-49b9-afd6-08a27957ffa4","createdByUserId":"4c3be827-ca99-4700-a8a9-bb6f69af5773"}'

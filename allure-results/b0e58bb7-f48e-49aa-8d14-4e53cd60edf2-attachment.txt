@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTE5VDE1OjU1OjQyLjgwNjUxNyIsInVzZXJfaWQiOiJlNTg5NTk5ZS0zMDAxLTQ4NDYtODc1OC01ZjA1YjJiNjc1YjIifQ.q-WXSOZomWQpJ8f0l8-cfF3pcQHlyEoX9xo5OaR5wiw' \
+  -H 'content-length: 271' \
+  -H 'content-type: application/json' \
+  -d '{"title":"These matter girl meet food message reveal.","maxScore":67,"minScore":21,"description":"Authority democratic enter raise.","estimatedTime":"6 weeks","previewFileId":"6b5c1e4c-05ab-471b-a173-90153501c637","createdByUserId":"e589599e-3001-4846-8758-5f05b2b675b2"}'

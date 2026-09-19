@@ -1,7 +1,7 @@
 from httpx import Client
 
 import config
-from httpx_module.clients.event_hooks import curl_event_hook
+from httpx_module.clients.event_hooks import curl_event_hook, log_request_event_hook, log_response_event_hook
 
 from config import settings
 
@@ -12,4 +12,4 @@ def get_public_http_client() -> Client:
 
     :return: Настроенный экземпляр httpx.Client
     """
-    return Client(timeout=settings.http_client.timeout, base_url=settings.http_client.client_url, event_hooks={"request": [curl_event_hook]})
+    return Client(timeout=settings.http_client.timeout, base_url=settings.http_client.client_url, event_hooks={"request": [curl_event_hook, log_request_event_hook], "response": [log_response_event_hook]})

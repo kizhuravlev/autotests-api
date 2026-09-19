@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTE5VDE1OjU1OjQ3Ljg2MDEyNyIsInVzZXJfaWQiOiI0N2M2OWVkOS01ZGJkLTRiNzUtYTEzOC1lODdhNzAxZDM5YmYifQ.xWpA7Lb51yH7pOO_0i3fZbPDSQWZkULt1DV6ewAp_U4' \
+  -H 'content-length: 361' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Crime piece weight student lead occur.","courseId":"8b13da9f-ab5c-4ac2-ba4b-06ed95c98257","maxScore":91,"minScore":16,"orderIndex":24,"description":"Just writer why name expert. Agency order career Mrs.\nStay wear old respond surface. Defense ready always but imagine should reality. Major experience available thing about.","estimatedTime":"6 weeks"}'
