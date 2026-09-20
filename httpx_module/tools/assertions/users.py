@@ -2,6 +2,9 @@ from httpx_module.clients.users.users_schema import CreateUserRequestSchema, Get
 from httpx_module.pydantic_create_user import CreateUserResponseSchema
 from httpx_module.tools.assertions.base import assert_equal
 import allure
+from httpx_module.tools.logger import get_logger
+
+logger = get_logger("USERS_ASSETIONS")
 
 @allure.step("Check create user response")
 def assert_create_user_response(request: CreateUserRequestSchema, response: CreateUserResponseSchema):
@@ -12,6 +15,8 @@ def assert_create_user_response(request: CreateUserRequestSchema, response: Crea
     :param response: Ответ API с данными пользователя.
     :raises AssertionError: Если хотя бы одно поле не совпадает.
     """
+    logger.info("Check create user response")
+
     assert_equal(response.user.email, request.email, "email")
     assert_equal(response.user.last_name, request.last_name, "last_name")
     assert_equal(response.user.first_name, request.first_name, "first_name")
@@ -26,6 +31,8 @@ def assert_user(actual: UserSchema, expected: UserSchema):
     :param expected: Ответ на создание пользователя.
     :raises AssertionError: Если хотя бы одно поле не совпадает.
     """
+    logger.info("Check user")
+
     assert_equal(actual.id, expected.id, "id")
     assert_equal(actual.email, expected.email, "email")
     assert_equal(actual.last_name, expected.last_name, "last_name")
@@ -34,4 +41,6 @@ def assert_user(actual: UserSchema, expected: UserSchema):
 
 @allure.step("Check get user response")
 def assert_get_user_response(get_user_response: GetUserResponseSchema, create_user_response: CreateUserResponseSchema):
+    logger.info("Check get user response")
+
     assert_user(actual=get_user_response.user, expected=create_user_response.user)

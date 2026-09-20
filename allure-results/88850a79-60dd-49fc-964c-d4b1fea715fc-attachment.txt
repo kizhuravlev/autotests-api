@@ -1,0 +1,29 @@
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to GET http://localhost:8000/api/v1/exercises?courseId=bf4a1bd5-3dd9-4f73-98e4-e9d35646f385
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/exercises?courseId=bf4a1bd5-3dd9-4f73-98e4-e9d35646f385
+INFO     BASE_ASSERTIONS:base.py:17 Check that response status code equals to 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:107 Check get exercises response
+INFO     BASE_ASSERTIONS:base.py:69 Check that 'exercises' length equals to 1
+INFO     EXERCISES_ASSERTIONS:exercises.py:43 Check exercise
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'id' equals to dc3d6728-eb62-499e-be7b-1a473a35e821
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'title' equals to Floor agent down visit maintain fast set.
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'course_id' equals to bf4a1bd5-3dd9-4f73-98e4-e9d35646f385
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'max_score' equals to 70
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'min_score' equals to 28
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'order_index' equals to 32
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'description' equals to Allow child election more ahead. Short movement lose society stand her lead. Our lay second well myself. Property else return serious cause.
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'estimated_time' equals to 2 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:14 Check validation JSON schema

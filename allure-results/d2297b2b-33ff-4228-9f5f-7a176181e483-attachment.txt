@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTE5VDIwOjQyOjMzLjYyMjc1OSIsInVzZXJfaWQiOiJjZGJlZGY2Mi03MWZhLTQ2ZDQtYTAwZS1lNjdiODNhZWQyNTQifQ.hW1nvAU7a-SISKu5onCxTf4Co97wYKLyeabscZqK3-A' \
+  -H 'content-length: 248' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Eight rate quality whose.","maxScore":93,"minScore":3,"description":"Moment find any last fly air.","estimatedTime":"4 weeks","previewFileId":"04f7fa76-bddc-4c59-ab51-5d788b275377","createdByUserId":"cdbedf62-71fa-46d4-a00e-e67b83aed254"}'

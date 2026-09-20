@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTE5VDIwOjQyOjM2LjYyODU3OSIsInVzZXJfaWQiOiIzZGJlNzgzNy01MjI2LTQ1ZjYtOWUwMS0xYTIxZTFiZjI5ZDgifQ.rOS8TkJBMJNqrsLyXNv2-C6qBO24k0WnsVOZxH0GJz0' \
+  -H 'content-length: 296' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Teach view international stuff to during less.","maxScore":90,"minScore":12,"description":"Nation poor no bad better between commercial challenge.","estimatedTime":"1 weeks","previewFileId":"141f813d-42c5-4adf-9390-4e6660e66e20","createdByUserId":"3dbe7837-5226-45f6-9e01-1a21e1bf29d8"}'
