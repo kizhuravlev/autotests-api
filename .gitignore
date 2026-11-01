@@ -4,6 +4,7 @@ __pycache__
 
 # pycharm
 .idea
+.vscode
 
 # ai
 .codex
