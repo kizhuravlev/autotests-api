@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA2VDA3OjU5OjIyLjg5MTc0MCIsInVzZXJfaWQiOiI5MjM3YWVkYi03OGRhLTRiZTgtOWY4Zi1iZmVhOGMwNGVkY2YifQ.dVoWPcw6tLd4CwrFjNOYlvLIgMGXijYpEuiN07gPLdk' \
+  -H 'content-length: 247' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Term every old quickly.","maxScore":63,"minScore":2,"description":"Pull story structure analysis.","estimatedTime":"7 weeks","previewFileId":"6edfa539-5218-4004-90c7-dd7b7009af12","createdByUserId":"9237aedb-78da-4be8-9f8f-bfea8c04edcf"}'

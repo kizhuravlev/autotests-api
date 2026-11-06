@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA2VDA3OjU5OjI3LjUyOTQ4NiIsInVzZXJfaWQiOiIyY2I0ZDEyYi05ZTMzLTRhY2YtODYwOS1jOTBhMzAzZjg2NGEifQ.DzEJn-N2QXrEPyJzuHbCSTDx8esHvrQwRr52tgo7-6c' \
+  -H 'content-length: 268' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Public film drug off time grow.","maxScore":62,"minScore":14,"description":"Shake quickly new answer thousand federal.","estimatedTime":"8 weeks","previewFileId":"51d42e9e-8169-4542-9ddc-67072d454d90","createdByUserId":"2cb4d12b-9e33-4acf-8609-c90a303f864a"}'

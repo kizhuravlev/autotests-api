@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA2VDA3OjU5OjI1LjQ3NjIxNyIsInVzZXJfaWQiOiJiMWQ2N2UyZS1lOTEyLTQ2MTYtYjE3Zi1iMzJiMWFlZTNlY2QifQ.mhad0WMtOU0naL7pTipgvhL8h1KCuKcDFjU9AvickFM' \
+  -H 'content-length: 248' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Entire employee member strong.","maxScore":95,"minScore":12,"description":"Capital dark hand plan.","estimatedTime":"2 weeks","previewFileId":"c2cac0e5-b014-4b8b-8b59-4bb182284b11","createdByUserId":"b1d67e2e-e912-4616-b17f-b32b1aee3ecd"}'

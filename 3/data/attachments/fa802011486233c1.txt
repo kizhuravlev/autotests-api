@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA2VDA3OjU5OjI4LjU1MjI4NCIsInVzZXJfaWQiOiJkMTRjNGZjZi0wODkzLTRlZDAtODRkMC05YjQ2NTI0NWIwMTYifQ.pLNklyVoDQ8OXsKDHbaq3neanqeabNe6ocDe-gW5Hm0' \
+  -H 'content-length: 283' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Protect tree score what religious author drop.","maxScore":99,"minScore":21,"description":"Possible result lot perform manage garden.","estimatedTime":"5 weeks","previewFileId":"ccd73b61-7003-47b3-b8d8-d2616bddb74c","createdByUserId":"d14c4fcf-0893-4ed0-84d0-9b465245b016"}'

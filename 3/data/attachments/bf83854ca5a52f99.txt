@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA2VDA3OjU5OjI1LjIxNDI5OSIsInVzZXJfaWQiOiJiMWQ2N2UyZS1lOTEyLTQ2MTYtYjE3Zi1iMzJiMWFlZTNlY2QifQ.Sa2B6wEkdlkM1NqTBcSSGCAVCLG2wO67qLSi6TxhE6s' \
+  -H 'content-length: 358' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Discover such sound image first they real deal.","courseId":"2dc8728c-bd70-4283-82ec-19bd3747c5c1","maxScore":75,"minScore":18,"orderIndex":65,"description":"Despite return war look east big late. Pretty business religious data side. Property through but ball spring. Modern follow question power successful them apply.","estimatedTime":"10 weeks"}'

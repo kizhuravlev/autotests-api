@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA2VDA3OjU5OjI5LjU4NzMzNCIsInVzZXJfaWQiOiI1ZmNjZmRiOC05MDkzLTQ3MzYtYTVjOC04NGU0YjY2ZGVlNTgifQ.OBkSgK1lfwVwO-HMbhLGzcc1EsriEERds_58C1IHqso' \
+  -H 'content-length: 250' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Old strong music model road.","maxScore":58,"minScore":24,"description":"Structure woman population.","estimatedTime":"9 weeks","previewFileId":"4ea3fa04-61c8-4b55-b716-aa4107e2ea2e","createdByUserId":"5fccfdb8-9093-4736-a5c8-84e4b66dee58"}'

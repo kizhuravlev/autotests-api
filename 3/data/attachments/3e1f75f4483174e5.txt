@@ -1,0 +1,24 @@
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/exercises
+INFO     BASE_ASSERTIONS:base.py:17 Check that response status code equals to 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:24 Check create exercise response
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'title' equals to Discover such sound image first they real deal.
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'course_id' equals to 2dc8728c-bd70-4283-82ec-19bd3747c5c1
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'max_score' equals to 75
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'min_score' equals to 18
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'order_index' equals to 65
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'description' equals to Despite return war look east big late. Pretty business religious data side. Property through but ball spring. Modern follow question power successful them apply.
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'estimated_time' equals to 10 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:14 Check validation JSON schema

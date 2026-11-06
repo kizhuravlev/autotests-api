@@ -1,0 +1,30 @@
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to GET http://localhost:8000/api/v1/exercises?courseId=962b9a1d-d042-462f-9b98-071d6c72c779
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/exercises?courseId=962b9a1d-d042-462f-9b98-071d6c72c779
+INFO     BASE_ASSERTIONS:base.py:17 Check that response status code equals to 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:107 Check get exercises response
+INFO     BASE_ASSERTIONS:base.py:69 Check that 'exercises' length equals to 1
+INFO     EXERCISES_ASSERTIONS:exercises.py:43 Check exercise
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'id' equals to 39f5b12b-322d-4cec-af28-254919c8706d
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'title' equals to Not join thus would.
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'course_id' equals to 962b9a1d-d042-462f-9b98-071d6c72c779
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'max_score' equals to 72
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'min_score' equals to 22
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'order_index' equals to 64
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'description' equals to Expert under card behavior push approach.
+By role up reality chair finish network. By physical practice guess. View past official.
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'estimated_time' equals to 10 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:14 Check validation JSON schema

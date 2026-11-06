@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/0f7fb920-7c85-478a-aa5d-a6c9860d58c1' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA2VDA3OjU5OjIzLjY1NDI5MyIsInVzZXJfaWQiOiJiNWU3YzVhYi0yOTI2LTQyNGUtOWFmNS1hZTE0YzU2N2E5OWQifQ.zW5nww9BemracsUVK-3CpcYtCzLULJ-M2VSuQkgPafU' \
+  -H 'content-length: 157' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Accept final data wear resource.","maxScore":99,"minScore":26,"description":"Firm process strategy growth else between.","estimatedTime":"9 weeks"}'

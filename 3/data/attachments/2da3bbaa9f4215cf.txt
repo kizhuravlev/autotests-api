@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/exercises/864e5546-a984-47c6-ab79-95db7fef4017' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA2VDA3OjU5OjI2LjI0NTM3MyIsInVzZXJfaWQiOiIxYjIzZDkyYi00N2E4LTRmZDQtYjdkMS02ODU2MDZjNzlkZDUifQ.oMJ0pAjbZf7S3Uo0i9ushZlh-915zT-r_64x9HJ8Ozo' \
+  -H 'content-length: 276' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Suggest forget not either small.","maxScore":58,"minScore":11,"orderIndex":78,"description":"Management produce tough mother sign data. Itself remember authority expert test. Bill health choose according sit edge. Range benefit scientist.","estimatedTime":"5 weeks"}'

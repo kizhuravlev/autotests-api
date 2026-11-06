@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA2VDA3OjU5OjI0LjQ3NTc1NSIsInVzZXJfaWQiOiI1MmMwN2FiYy04N2UxLTQ5MTktYjQxNy02YjE3ZjczOWRjN2EifQ.86y3DfkFX8y-K5C41EvMUIpsUBpPZxOjcE2Sngpvqdo' \
+  -H 'content-length: 290' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Activity begin change performance democratic quality allow.","maxScore":72,"minScore":24,"description":"Four bed forget trade room consumer.","estimatedTime":"1 weeks","previewFileId":"3e91ef4f-cd98-41f2-bed8-7c0b9bf86ca9","createdByUserId":"52c07abc-87e1-4919-b417-6b17f739dc7a"}'
