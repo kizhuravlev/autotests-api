@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjExOjE5LjEwMzA1MCIsInVzZXJfaWQiOiJkMmM4MGRlYy01MGRiLTQxMDktYmFkOC00OGVmN2E0N2E4NjYifQ.XKETbRIzhsZ0cigl6hNVC9U-TiMDzxbxlWWC5-CsCZs' \
+  -H 'content-length: 256' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Boy human sister much among.","maxScore":50,"minScore":15,"description":"Three say see national religious.","estimatedTime":"3 weeks","previewFileId":"2278596d-a090-4b3e-a299-c061941b217c","createdByUserId":"d2c80dec-50db-4109-bad8-48ef7a47a866"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjExOjE3LjM4NzkyMSIsInVzZXJfaWQiOiIzYjQ2OGU2MC00MTE5LTQ1NWItYmNlYS0yN2U5MzVkMmZmYTMifQ.cwmmC4R9uw-p6zXsqQSrkbsJTF0NbAoDbK7cyI4a8vI' \
+  -H 'content-length: 266' \
+  -H 'content-type: application/json' \
+  -d '{"title":"How whom lead industry.","maxScore":56,"minScore":16,"description":"Congress defense reflect ok human argue mission.","estimatedTime":"7 weeks","previewFileId":"2bb18e26-4ebd-45ca-b148-0c477fd607cc","createdByUserId":"3b468e60-4119-455b-bcea-27e935d2ffa3"}'

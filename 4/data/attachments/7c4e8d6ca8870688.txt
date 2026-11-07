@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjExOjE5LjM3Nzg0NiIsInVzZXJfaWQiOiJmOGQ3N2Y3MS0zY2Q1LTQyZDQtYTdjMS1jZWM2NzM1MzMxNDIifQ.GY0pxTzjBUxp2e4Vao84a11ZhpreOFDjJglVS2cFfok' \
+  -H 'content-length: 272' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Career authority single second old work piece.","maxScore":90,"minScore":22,"description":"Read ask order real month item.","estimatedTime":"6 weeks","previewFileId":"db764608-907c-47ea-aea1-4e5b0771516b","createdByUserId":"f8d77f71-3cd5-42d4-a7c1-cec673533142"}'

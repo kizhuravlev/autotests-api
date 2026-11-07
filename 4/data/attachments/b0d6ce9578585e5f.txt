@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjExOjIxLjY2ODAwNiIsInVzZXJfaWQiOiIzY2Q3YjY2OS0yMDA2LTQ2NDAtODE0ZC1kYzA4NDExYTRhNzgifQ.oaUiz0FhKs52JuS_B2eqZXDLNuz7Sk2YJ9786tN6hg8' \
+  -H 'content-length: 254' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Blood budget wait how free.","maxScore":98,"minScore":9,"description":"Reality activity evidence impact.","estimatedTime":"2 weeks","previewFileId":"c1bfb555-39ed-4e44-af74-a0703dd148a0","createdByUserId":"3cd7b669-2006-4640-814d-dc08411a4a78"}'

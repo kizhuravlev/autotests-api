@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjExOjIxLjM5MDI5NSIsInVzZXJfaWQiOiIxYmE5ZjgyZS01NjIxLTRhMzItYmJlMi1lZDNmYzI0OTVhMzAifQ.QDR8CsbpL67ybRIFDIx_71KZ6KZ5z6NTaz9ZHloK9b0' \
+  -H 'content-length: 276' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Color guy impact professional glass.","maxScore":91,"minScore":11,"description":"Hard main just explain pull food phone image.","estimatedTime":"6 weeks","previewFileId":"af26e8ed-391c-4790-97df-38d28a44c36a","createdByUserId":"1ba9f82e-5621-4a32-bbe2-ed3fc2495a30"}'

@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/48d41f6f-82df-4a9c-81f0-cec3999dfe93' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjExOjE2LjUyMzY0NiIsInVzZXJfaWQiOiJmM2I1YzlmYS1jNzQ2LTQxMDEtYmNiYy04YTgyNDQ1OTI0OGQifQ.GVbx7mePH5xUfNtmQmz6L6tUVk5aroDwsdLAM155r3Y' \
+  -H 'content-length: 153' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Dinner east structure career knowledge.","maxScore":83,"minScore":13,"description":"Man everything quite blood him.","estimatedTime":"9 weeks"}'
