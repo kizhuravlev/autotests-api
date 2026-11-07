@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjM4OjA2LjI5NTczNyIsInVzZXJfaWQiOiJjNDc4NmNhZi04ZjkzLTQwOTItYTBmZS1iYWQxNjMwYjNiNWUifQ.C14uFzG668w6t6FNgs9dmWjhB39SK7fSyBSNO075Nbg' \
+  -H 'content-length: 296' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Rather political sea shoulder series family industry single.","maxScore":96,"minScore":8,"description":"Information because time there throughout.","estimatedTime":"4 weeks","previewFileId":"32137aa5-4357-46a2-8b46-ce643a89a686","createdByUserId":"c4786caf-8f93-4092-a0fe-bad1630b3b5e"}'

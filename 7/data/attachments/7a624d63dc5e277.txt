@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjM4OjA0LjM3ODIwNyIsInVzZXJfaWQiOiI1NWYzOWMyMS0wODAyLTRmOTItYjRhNi02NjU4NzYyYmU5YTUifQ.DDU2vhzOT81bW0iA5GjSZBMj6dKTDpB9mNeZujKLOzQ' \
+  -H 'content-length: 263' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Part nature include.","maxScore":52,"minScore":18,"description":"Back natural first rest become culture positive.","estimatedTime":"2 weeks","previewFileId":"63b623ec-0be9-4aab-8182-39081db10a6c","createdByUserId":"55f39c21-0802-4f92-b4a6-6658762be9a5"}'

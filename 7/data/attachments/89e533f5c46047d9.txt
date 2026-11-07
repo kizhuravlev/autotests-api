@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjM4OjAzLjMwODQzNSIsInVzZXJfaWQiOiI0MmNlNDA3ZC04Y2NjLTRlMzktYWMyNC1hNGU0YTE3YTlmODQifQ.qP8DDTCD4n05jj-Ra0_ziIc96VRaXn-g5HZMwlW4fqE' \
+  -H 'content-length: 366' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Enjoy situation opportunity human home bed open.","courseId":"2084f658-8c24-4d66-9bff-7d76fd4bca75","maxScore":82,"minScore":18,"orderIndex":38,"description":"Too hour state away wind about. Tv standard hot positive reduce. Reduce own next budget parent heavy.\nMachine party doctor special quality. Trip unit same lawyer class.","estimatedTime":"7 weeks"}'

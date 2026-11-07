@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjM4OjAxLjE1ODI0MSIsInVzZXJfaWQiOiI4NDk1MDEyMS1mYzgzLTQ2MWEtODM5MS03ODUwZTM3ZWExNDIifQ.ykNOGKshZB5kwlghf7KkD7iJ-VmNkYHgZmheegLgMRc' \
+  -H 'content-length: 267' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Would couple occur building decade.","maxScore":91,"minScore":15,"description":"Debate mind life true against anyone.","estimatedTime":"1 weeks","previewFileId":"24fc9c9a-c24f-40e9-a402-3ae433ee23a4","createdByUserId":"84950121-fc83-461a-8391-7850e37ea142"}'

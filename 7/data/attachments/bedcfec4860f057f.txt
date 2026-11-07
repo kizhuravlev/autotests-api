@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjM4OjA1LjE5ODY0NyIsInVzZXJfaWQiOiJmNzhkZGQxMi1hZDU5LTQ4YTUtOGYxNi1kODE2YWM0Njc0MWYifQ.MiU2fVqoKbCCRSLnBs60sItviRHd4ZVmxqy_kiLiTdU' \
+  -H 'content-length: 294' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Surface offer former return phone well road.","maxScore":56,"minScore":28,"description":"White suddenly plant light return career organization.","estimatedTime":"10 weeks","previewFileId":"5396695d-f7b5-4e0d-be03-f99cbffb0bf6","createdByUserId":"f78ddd12-ad59-48a5-8f16-d816ac46741f"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjM4OjAwLjU2MjEwOSIsInVzZXJfaWQiOiI4ZjA0ZDhmNS1iYWM5LTQ1ODUtYTE0MS1iYzI3YTExMzEzNjIifQ.Y_BpFwkxZsz4AINkdWeKqLXl_znQrmRzME5E9TS8lw4' \
+  -H 'content-length: 254' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Join couple tonight attack special never.","maxScore":97,"minScore":4,"description":"Rock defense score.","estimatedTime":"6 weeks","previewFileId":"f1cf9172-eeac-424e-ae8a-3a47bb18afcd","createdByUserId":"8f04d8f5-bac9-4585-a141-bc27a1131362"}'

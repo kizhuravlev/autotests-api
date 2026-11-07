@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjM4OjAyLjQ5Mzg1MSIsInVzZXJfaWQiOiJlNDFjYmQ2OC05MTUwLTQ2ZDQtYTUxMy00NWEzYjVjMmU3ZjQifQ.iHr1lvf4z91Qu8OkFCrmRpqtej-B5g49vD2PymZaXfY' \
+  -H 'content-length: 337' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Decade figure memory party morning during.","courseId":"79c403c7-aca8-4684-9a1c-2a1c72118647","maxScore":60,"minScore":9,"orderIndex":81,"description":"Open energy discussion other exactly future especially. Subject visit away season Mrs science. Draw degree behind theory green whatever deep share.","estimatedTime":"3 weeks"}'

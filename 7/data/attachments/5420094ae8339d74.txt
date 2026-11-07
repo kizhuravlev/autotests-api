@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/d9e3d4d7-d181-4830-91ef-97c7ae23dce1' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjM4OjAxLjE1ODI0MSIsInVzZXJfaWQiOiI4NDk1MDEyMS1mYzgzLTQ2MWEtODM5MS03ODUwZTM3ZWExNDIifQ.ykNOGKshZB5kwlghf7KkD7iJ-VmNkYHgZmheegLgMRc' \
+  -H 'content-length: 164' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Big value standard threat live maintain ground organization.","maxScore":93,"minScore":13,"description":"Remember top culture.","estimatedTime":"7 weeks"}'

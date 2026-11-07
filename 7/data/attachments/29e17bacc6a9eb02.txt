@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTA3VDIwOjM4OjAxLjg2NjQ4NiIsInVzZXJfaWQiOiJmNmM0ZGVmNC1hOWMyLTQwMjktYTc3Zi01NzVhZjdjNGJlYjMifQ.JgwKx90O92A2xtVIxpw67UNR1fAEDzn-YFKSxdEdhhw' \
+  -H 'content-length: 269' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Light group happen protect result.","maxScore":50,"minScore":6,"description":"Turn activity strong listen take another.","estimatedTime":"5 weeks","previewFileId":"3a6d4b31-393d-4ab7-b600-101b9ea252b7","createdByUserId":"f6c4def4-a9c2-4029-a77f-575af7c4beb3"}'
