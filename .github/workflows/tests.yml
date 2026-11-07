@@ -11,17 +11,15 @@ on:
 jobs:
   run-tests:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v7
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Clone test server repository
         run: git clone https://github.com/Nikita-Filonov/qa-automation-engineer-api-course.git
@@ -29,7 +27,7 @@ jobs:
       - name: Install test server dependencies
         run: pip install -r qa-automation-engineer-api-course/requirements.txt
 
-      - name: Start test server
+      - name: Start a test server
         env:
           APP_HOST: "http://localhost:8000"
           DATABASE_URL: "sqlite+aiosqlite:///./local.db"
@@ -44,48 +42,45 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Wait for test server
-        run: |
-          for attempt in {1..30}; do
-            if curl --fail --silent http://localhost:8000/openapi.json > /dev/null; then
-              exit 0
-            fi
-            sleep 2
-          done
-          echo "Test server did not become ready" >&2
-          exit 1
-
       - name: Run API tests with pytest and generate Allure results
-        env:
-          TEST_DATA.IMAGE_PNG_FILE: "./testdata/files/image.png"
-          HTTP_CLIENT.URL: "http://localhost:8000"
-          HTTP_CLIENT.TIMEOUT: "100"
         run: |
-          pytest -m regression --alluredir=allure-results --numprocesses 2
+          pytest -m regression --alluredir=allure-results --numprocesses=2
+
+      - name: Upload Allure results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results
 
   publish-report:
-    needs: run-tests
+    if: always()
+    needs: [ run-tests ]
     runs-on: ubuntu-latest
+
     steps:
-      - name: Get Allure history
-        uses: actions/checkout@v7
-        if: always()
-        continue-on-error: true
+      - name: Check out repository
+        uses: actions/checkout@v4
         with:
           ref: gh-pages
           path: gh-pages
 
+      - name: Download Allure results
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results
+
       - name: Generate Allure Report with history
-        uses: simple-elf/allure-report-action@v1.15
+        uses: simple-elf/allure-report-action@v1.12
         if: always()
         with:
           allure_results: allure-results
-          gh_pages: gh-pages
           allure_history: allure-history
 
-      - name: Deploy to Github Pages
+      - name: Deploy report to Github Pages
+        if: always()
         uses: peaceiris/actions-gh-pages@v4
-        if: always() && github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
