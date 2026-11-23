@@ -7,12 +7,15 @@ from httpx_module.clients.auth.auth_schema import LoginRequestSchema, LoginRespo
 from httpx_module.clients.public_http_builder import get_public_http_client
 from httpx_module.tools.routes import APIRoutes
 
+from httpx_module.clients.api_coverage import tracker
+
 
 class AuthClient(APIClient):
     """
     Клиент для работы с APIRoutes.AUTHENTICATION
     """
     @allure.step("Login user")
+    @tracker.track_coverage_httpx(f"{APIRoutes.AUTHENTICATION}/login")
     def login_api(self, request: LoginRequestSchema) -> Response:
         """
         Метод выполняет аутентификацию пользователя.
@@ -23,6 +26,7 @@ class AuthClient(APIClient):
         return self.post(f"{APIRoutes.AUTHENTICATION}/login", json=request.model_dump(by_alias=True))
 
     @allure.step("Refresh access token")
+    @tracker.track_coverage_httpx(f"{APIRoutes.AUTHENTICATION}/refresh")
     def refresh_api(self, request: RefreshRequestSchema) -> Response:
         """
         Метод обновляет токен авторизации.
