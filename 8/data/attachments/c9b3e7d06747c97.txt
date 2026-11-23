@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTIzVDIwOjU2OjM5Ljk1OTk5MCIsInVzZXJfaWQiOiI3ZTk5ZDU0YS00NTE3LTRjMGItOWVkYi1hODAxODlkYWZlOTgifQ.q-dZ2_x1BXmCX-teyxlgCnncFB07-rqLr5YBR7pM21k' \
+  -H 'content-length: 253' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Quickly play group girl rock sure.","maxScore":88,"minScore":8,"description":"Soldier special official.","estimatedTime":"8 weeks","previewFileId":"ef0e4314-edc6-4099-9118-ab0a70944d81","createdByUserId":"7e99d54a-4517-4c0b-9edb-a80189dafe98"}'

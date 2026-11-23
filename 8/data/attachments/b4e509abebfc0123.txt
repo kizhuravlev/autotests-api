@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTIzVDIwOjU2OjQxLjI3NjgwNyIsInVzZXJfaWQiOiI0MGE4YzllOC1iYWU4LTQwZjAtYTFjNi0wOTQ0MDQwN2VlNDAifQ.sNigxRrDqdAI29eA8KYmzWnf8sTJrT3vMBNJdmlrhVg' \
+  -H 'content-length: 267' \
+  -H 'content-type: application/json' \
+  -d '{"title":"She manage same national tree rate test adult.","maxScore":59,"minScore":25,"description":"Let tax start fact camera.","estimatedTime":"5 weeks","previewFileId":"8f099771-2dc7-417c-bac4-b4b56287b514","createdByUserId":"40a8c9e8-bae8-40f0-a1c6-09440407ee40"}'

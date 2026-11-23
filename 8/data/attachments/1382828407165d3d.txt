@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTIzVDIwOjU2OjM5LjI0MTg2NCIsInVzZXJfaWQiOiJlMTZmOTJmOC04NDc0LTQ4ZjgtYmMzZi1iZjQ3YTc4MTYzZTMifQ.o0Gm07UunF8fL0hMMYcGHNTTEXDa8FP9L4IHv_5EgSg' \
+  -H 'content-length: 259' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Southern run others southern.","maxScore":57,"minScore":17,"description":"Sit face two work interview accept.","estimatedTime":"1 weeks","previewFileId":"c7533d7e-a691-439c-9707-1dedef2358a5","createdByUserId":"e16f92f8-8474-48f8-bc3f-bf47a78163e3"}'

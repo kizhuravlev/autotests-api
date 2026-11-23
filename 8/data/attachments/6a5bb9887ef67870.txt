@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTIzVDIwOjU2OjM0LjEwNzg0NCIsInVzZXJfaWQiOiIxNGYzNjJkYy0xZTRlLTQ5NmEtYTJmZC04YjI3Yjk1OTM3M2QifQ._-Mb0akhiGtio6eftmHPgGwutmU5jVJZKtvWILe_vv4' \
+  -H 'content-length: 259' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Month anything debate easy available.","maxScore":56,"minScore":15,"description":"Future hit program believe.","estimatedTime":"1 weeks","previewFileId":"d06e6b3a-61ff-4127-b32e-a63f3d127aca","createdByUserId":"14f362dc-1e4e-496a-a2fd-8b27b959373d"}'

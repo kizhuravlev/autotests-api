@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTIzVDIwOjU2OjM3LjY1NzQ4NiIsInVzZXJfaWQiOiIyNzVhMGI5NS05NjYxLTQ2YTMtYWNmOC1hODU3M2IwMTI4OTcifQ.XvQERG-IvGvwgDrHnx_YZN0EpjqouhrrxaAUY8vxXp4' \
+  -H 'content-length: 249' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Nothing ground beyond usually join.","maxScore":69,"minScore":1,"description":"True task into half.","estimatedTime":"7 weeks","previewFileId":"bcd30de3-e98e-4fb2-b597-10ac25fba430","createdByUserId":"275a0b95-9661-46a3-acf8-a8573b012897"}'

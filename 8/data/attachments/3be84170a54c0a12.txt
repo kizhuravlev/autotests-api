@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTIzVDIwOjU2OjM1LjkxNDg0NCIsInVzZXJfaWQiOiI4Y2Q5ZWIzZC0yZjY5LTRjOWEtOWI5Zi05NWY0OGY0MThkZTEifQ.Uz_8wQIvXrRWhcs63Nbhk-AQg7rHe1nzpUTdw_m6uQI' \
+  -H 'content-length: 273' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Onto ahead author exactly social.","maxScore":93,"minScore":25,"description":"Claim management marriage market family ball.","estimatedTime":"2 weeks","previewFileId":"ee946024-831d-49d4-a36d-e8dde567fbb6","createdByUserId":"8cd9eb3d-2f69-4c9a-9b9f-95f48f418de1"}'

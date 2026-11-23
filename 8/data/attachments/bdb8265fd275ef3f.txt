@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/0fa81247-cfe2-4055-9a2d-c05666a27dc0' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTIzVDIwOjU2OjM1LjA3OTQyNCIsInVzZXJfaWQiOiJkZmMyNzlmZi0zZjI3LTRkNDUtYTdiYi1hMmEzZDdmNmRiZmUifQ.3-CYCqhogk8IQy8eJHMBwRU5x1MymRsPoJijiyrq_VI' \
+  -H 'content-length: 175' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Tend study determine throughout partner consider see.","maxScore":51,"minScore":9,"description":"Fire million hour spend available smile.","estimatedTime":"2 weeks"}'

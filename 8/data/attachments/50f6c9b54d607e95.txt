@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/exercises/20b4e790-1718-4e1f-b61c-4a3912335270' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTIzVDIwOjU2OjM3LjE3ODYyMSIsInVzZXJfaWQiOiIyNzVhMGI5NS05NjYxLTQ2YTMtYWNmOC1hODU3M2IwMTI4OTcifQ.YoSwPTRWYYu1EKY9B7OZewciV_cQ6TlXd_U5Pu70DGA' \
+  -H 'content-length: 267' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Reveal through bank no beyond.","maxScore":88,"minScore":14,"orderIndex":29,"description":"Plant decision which successful five. Prepare set through which both seem.\nPush west left tend. Study month million question alone smile.","estimatedTime":"8 weeks"}'

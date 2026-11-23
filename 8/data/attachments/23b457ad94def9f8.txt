@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTIzVDIwOjU2OjM1LjA3OTQyNCIsInVzZXJfaWQiOiJkZmMyNzlmZi0zZjI3LTRkNDUtYTdiYi1hMmEzZDdmNmRiZmUifQ.3-CYCqhogk8IQy8eJHMBwRU5x1MymRsPoJijiyrq_VI' \
+  -H 'content-length: 258' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Long else kid executive tonight.","maxScore":99,"minScore":28,"description":"Exist must on the beautiful my.","estimatedTime":"2 weeks","previewFileId":"ed6790f2-88c3-4166-83b9-0522d0926c53","createdByUserId":"dfc279ff-3f27-4d45-a7bb-a2a3d7f6dbfe"}'
