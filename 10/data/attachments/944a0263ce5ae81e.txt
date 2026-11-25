@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTI1VDIxOjMxOjU5LjA5OTE3NiIsInVzZXJfaWQiOiI2YWFkMzhlOS00NjU2LTQzMTgtODgyZS1iYjk1MWMxNjQ0MDYifQ.nGjv5RwMWQq1cfxDfB9_FX2J9hIeyj5p7zLXphwSJN8' \
+  -H 'content-length: 286' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Worry far adult scene kid establish bad.","maxScore":50,"minScore":10,"description":"Left mind southern clearly parent against physical.","estimatedTime":"1 weeks","previewFileId":"ee7822b8-0c5b-4391-ab80-7578e8737168","createdByUserId":"6aad38e9-4656-4318-882e-bb951c164406"}'

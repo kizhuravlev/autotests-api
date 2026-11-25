@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/58f0461d-299e-4a99-8f4f-46c4615597d3' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTI1VDIxOjMxOjUyLjUwMTQwOCIsInVzZXJfaWQiOiI0NTE4NjM4NS1lYjBkLTRkN2YtOTU3Yy02MzgxMTM1MThlYzQifQ.Up4-jSYcFtNWch8PPx84xR8bc7C-o73MtjQYfhhpG3E' \
+  -H 'content-length: 162' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Itself turn change figure behind.","maxScore":87,"minScore":27,"description":"Drug bed purpose different quickly appear too.","estimatedTime":"2 weeks"}'

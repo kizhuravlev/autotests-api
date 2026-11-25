@@ -1,0 +1,36 @@
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to GET http://localhost:8000/api/v1/courses?userId=b1f9c766-304e-4542-988d-f468b9f2668d
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/courses?userId=b1f9c766-304e-4542-988d-f468b9f2668d
+INFO     BASE_ASSERTIONS:base.py:17 Check that response status code equals to 200
+INFO     COURSE_ASSERTIONS:course.py:72 Check get course response
+INFO     BASE_ASSERTIONS:base.py:69 Check that 'courses' length equals to 1
+INFO     COURSE_ASSERTIONS:course.py:49 Check course
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'id' equals to 6f07f47e-8704-4eb8-9449-8bae8cbea5cc
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'title' equals to Run bag wide measure fine chance.
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'max_score' equals to 100
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'min_score' equals to 5
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'description' equals to Theory page large treat kitchen approach teach pattern.
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'preview_file' equals to id='fa25e152-f5af-41f8-bf3e-c21f1d1aa1b0' filename='e8ab2eb7-82f7-4520-9486-9bf71ff458ff.png' directory='tests' url=HttpUrl('http://localhost:8000/static/tests/e8ab2eb7-82f7-4520-9486-9bf71ff458ff.png')
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'estimated_time' equals to 7 weeks
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'created_by_user' equals to id='b1f9c766-304e-4542-988d-f468b9f2668d' email='daniellerogers@example.com' last_name='Hall' first_name='Katelyn' middle_name='Megan'
+INFO     FILES_ASSERTIONS:files.py:41 Check file
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'id' equals to fa25e152-f5af-41f8-bf3e-c21f1d1aa1b0
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'filename' equals to e8ab2eb7-82f7-4520-9486-9bf71ff458ff.png
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'directory' equals to tests
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'url' equals to http://localhost:8000/static/tests/e8ab2eb7-82f7-4520-9486-9bf71ff458ff.png
+INFO     USERS_ASSETIONS:users.py:34 Check user
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'id' equals to b1f9c766-304e-4542-988d-f468b9f2668d
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'email' equals to daniellerogers@example.com
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'last_name' equals to Hall
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'first_name' equals to Katelyn
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'middle_name' equals to Megan
+INFO     SCHEMA_ASSERTIONS:schema.py:14 Check validation JSON schema

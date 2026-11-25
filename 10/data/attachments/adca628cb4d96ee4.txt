@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTI1VDIxOjMxOjU2Ljc4MzgwNCIsInVzZXJfaWQiOiIzNDNjZTgwNC04ODI1LTRkZTEtYmEwZS05MDhkZDIxNmM2NTEifQ.WsUK0xdJgUVEtpiW00o3f1RbKlqBatTD1V2vGNON-FI' \
+  -H 'content-length: 232' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Score you sea top.","maxScore":84,"minScore":23,"description":"Range prepare note.","estimatedTime":"8 weeks","previewFileId":"21246c9d-a63e-47e9-8df6-8dad44aa8374","createdByUserId":"343ce804-8825-4de1-ba0e-908dd216c651"}'

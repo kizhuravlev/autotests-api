@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTI1VDIxOjMxOjUzLjM2MTgxNSIsInVzZXJfaWQiOiIwMzUyMzEyMy03NmU0LTRiODEtOWUxMC0xOTFlZTVkMTg4ZGEifQ.rQvlwH77JmjFSuA1HT2_xvtxOGfcbd_gwtDVUuyGJQo' \
+  -H 'content-length: 275' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Reach strong product continue build.","maxScore":68,"minScore":12,"description":"Benefit share environment be determine food.","estimatedTime":"5 weeks","previewFileId":"55b52e7c-4e6b-4562-800d-8725c523299e","createdByUserId":"03523123-76e4-4b81-9e10-191ee5d188da"}'

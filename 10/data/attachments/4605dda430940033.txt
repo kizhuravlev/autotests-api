@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTI1VDIxOjMxOjU0LjUyMTA3OSIsInVzZXJfaWQiOiJlNjljNTliNy01ZDRmLTRhYTItOGVjZS02YzMyYTZlYTBlOWUifQ.bXzR5ZzmoTC_8Stfn4cOpXFM6yXMUXoKSMayP8ca_cY' \
+  -H 'content-length: 276' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Mean system possible know.","maxScore":94,"minScore":24,"description":"Form example military yard offer appear white analysis.","estimatedTime":"7 weeks","previewFileId":"025cf408-0268-425b-a149-244a67ba6f07","createdByUserId":"e69c59b7-5d4f-4aa2-8ece-6c32a6ea0e9e"}'

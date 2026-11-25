@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTI1VDIxOjMxOjU1LjY0MTk0MyIsInVzZXJfaWQiOiIyNzRkZmM0Yy02M2JlLTRmMDktOTcyNi05ZDU4MzYyOTE3NTkifQ.BDEqjV-eZ5Pl-a2kR7hoiW1ZcJ5Yyjk0mh7dkhzlrmo' \
+  -H 'content-length: 275' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Across question start center address condition stuff.","maxScore":81,"minScore":9,"description":"Old behind establish player.","estimatedTime":"3 weeks","previewFileId":"b32f9cec-3f64-46b9-9640-34f26858066a","createdByUserId":"274dfc4c-63be-4f09-9726-9d5836291759"}'

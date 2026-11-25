@@ -1,0 +1,29 @@
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to GET http://localhost:8000/api/v1/exercises/1cf33db7-1dc0-425b-8705-b714b455ee5f
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/exercises/1cf33db7-1dc0-425b-8705-b714b455ee5f
+INFO     BASE_ASSERTIONS:base.py:17 Check that response status code equals to 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:63 Check get exercise response
+INFO     EXERCISES_ASSERTIONS:exercises.py:43 Check exercise
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'id' equals to 1cf33db7-1dc0-425b-8705-b714b455ee5f
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'title' equals to Think opportunity meeting responsibility.
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'course_id' equals to ff1d6939-3901-40d3-81de-99d1303b687b
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'max_score' equals to 58
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'min_score' equals to 17
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'order_index' equals to 60
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'description' equals to Green save ok few.
+Industry available public across. Major democratic compare fire six. Down manager career degree blood. Agency today cultural local thus mission system.
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'estimated_time' equals to 1 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:14 Check validation JSON schema
