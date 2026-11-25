@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTI1VDIxOjIxOjA1LjEwNTM1NCIsInVzZXJfaWQiOiJlMzFiY2Y3Ni1mMDRlLTRkZTctOGZlNC05Yjg4NDhkMWJmOTEifQ.vtRsChGslij8AogxuZtE4hGn5AI-BQ3F8QXLdjXRmHo' \
+  -H 'content-length: 249' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Mean on style section.","maxScore":70,"minScore":12,"description":"Group dinner wish pressure kind.","estimatedTime":"2 weeks","previewFileId":"0a1b854b-2842-4721-9797-fd4c1bdfa54e","createdByUserId":"e31bcf76-f04e-4de7-8fe4-9b8848d1bf91"}'

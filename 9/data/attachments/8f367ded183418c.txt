@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTI1VDIxOjIxOjA2LjU0OTc5OSIsInVzZXJfaWQiOiIwOTM5NDI3NC03N2Q5LTQ2NjQtYTVkZC0zY2U4NzQ3MDJkODYifQ.1xwc-_HV7EUlCkfH_rjlLYIO6VE4s9hjiS5AgnX_Gkg' \
+  -H 'content-length: 386' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Benefit drop behavior box practice early hold.","courseId":"eb0b4758-6074-4bcc-b8d2-b1d95ee78799","maxScore":97,"minScore":19,"orderIndex":78,"description":"Hand affect Democrat one but less together. Need action get maintain development remain.\nProduction or anything author ability brother character. Season determine mind set none prove chance.","estimatedTime":"6 weeks"}'

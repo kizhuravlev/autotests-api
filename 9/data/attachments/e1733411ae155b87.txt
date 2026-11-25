@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTI1VDIxOjIxOjA5LjEwMzE2MSIsInVzZXJfaWQiOiI5YmMxNjI3OC1mOWI1LTQxZTUtYjVmMi1kYzQ1M2M5ZTljNWUifQ.q15npJzOfORIl8yvS3BvG4mye7e--jLU6Luy223VMfQ' \
+  -H 'content-length: 253' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Wear seek threat her his contain.","maxScore":87,"minScore":9,"description":"Rule agree color long why.","estimatedTime":"9 weeks","previewFileId":"9b37355e-fb4c-4402-907d-87dfd8635835","createdByUserId":"9bc16278-f9b5-41e5-b5f2-dc453c9e9c5e"}'

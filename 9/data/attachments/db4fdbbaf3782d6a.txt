@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTI1VDIxOjIxOjA0LjIzNDM3MyIsInVzZXJfaWQiOiI5OGU2MWVlMC0xMGNjLTQxZGMtYjI0MC0zNTkyMWE2OTQzM2QifQ.BaxmPotMLZf4vY3vEB4b5iLP2VlbtLNf3fZgXE8BN7g' \
+  -H 'content-length: 263' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Nice whatever practice or business there hair.","maxScore":54,"minScore":23,"description":"Easy upon avoid apply.","estimatedTime":"7 weeks","previewFileId":"1e922450-295e-4dc1-9ae0-0992322ba21e","createdByUserId":"98e61ee0-10cc-41dc-b240-35921a69433d"}'

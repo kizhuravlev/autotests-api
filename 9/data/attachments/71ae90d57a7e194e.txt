@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTI1VDIxOjIxOjExLjQ0MjY2OCIsInVzZXJfaWQiOiJmZTJhODE1MC03NmNlLTRjYjEtOTk0OC0wNGZlMDI4MGI4ZDkifQ.Z_KY1b0ug5JelX9Zfz9Rrz4fMItL5OHgV-27yuVW6dY' \
+  -H 'content-length: 257' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Turn pull heavy like part exist image.","maxScore":99,"minScore":9,"description":"Leader trip decide store.","estimatedTime":"4 weeks","previewFileId":"fe37d82f-db85-4476-b091-dcb921e60f10","createdByUserId":"fe2a8150-76ce-4cb1-9948-04fe0280b8d9"}'

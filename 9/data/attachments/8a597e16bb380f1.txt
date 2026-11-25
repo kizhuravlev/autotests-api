@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/exercises/67a46cfb-e6ae-47ba-84ea-4b3c988be7b4' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTI1VDIxOjIxOjA2LjU0OTc5OSIsInVzZXJfaWQiOiIwOTM5NDI3NC03N2Q5LTQ2NjQtYTVkZC0zY2U4NzQ3MDJkODYifQ.1xwc-_HV7EUlCkfH_rjlLYIO6VE4s9hjiS5AgnX_Gkg' \
+  -H 'content-length: 235' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Forward major sit.","maxScore":67,"minScore":17,"orderIndex":87,"description":"Wife build partner along some blue score. Federal produce beautiful mean meet center free. Standard sea foot majority.","estimatedTime":"3 weeks"}'

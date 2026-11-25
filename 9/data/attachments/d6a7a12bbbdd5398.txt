@@ -1,0 +1,25 @@
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to POST http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:26 Make request to PATCH http://localhost:8000/api/v1/exercises/67a46cfb-e6ae-47ba-84ea-4b3c988be7b4
+INFO     HTTP_CLIENT:event_hooks.py:34 Get response 200 OK from http://localhost:8000/api/v1/exercises/67a46cfb-e6ae-47ba-84ea-4b3c988be7b4
+INFO     BASE_ASSERTIONS:base.py:17 Check that response status code equals to 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:76 Check update exercise response
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'title' equals to Forward major sit.
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'max_score' equals to 67
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'min_score' equals to 17
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'order_index' equals to 87
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'description' equals to Wife build partner along some blue score. Federal produce beautiful mean meet center free. Standard sea foot majority.
+INFO     BASE_ASSERTIONS:base.py:35 Check that 'estimated_time' equals to 3 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:14 Check validation JSON schema

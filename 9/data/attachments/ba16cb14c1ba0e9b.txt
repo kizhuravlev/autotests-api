@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTI1VDIxOjIxOjA4LjU1NTMzOSIsInVzZXJfaWQiOiI5YmMxNjI3OC1mOWI1LTQxZTUtYjVmMi1kYzQ1M2M5ZTljNWUifQ.cUskbo8TR786MzH7aNigdQxGPxqwlsmo7-Kh4P_sDZQ' \
+  -H 'content-length: 389' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Her fine point use open option believe.","courseId":"2ec32d85-c183-4f11-a825-f76748180f94","maxScore":52,"minScore":20,"orderIndex":74,"description":"Source know development voice evening politics. Enter have bit himself never.\nWind usually eye over. Admit society add nothing step speech.\nRock join keep just board owner. Such book past white note.","estimatedTime":"6 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTI1VDIxOjIxOjA5LjM3NzM4MiIsInVzZXJfaWQiOiI5MmZjNTVkMC0xN2VlLTQxZDQtOTBjMC04OTkyYjAzNTM1OTQifQ.Ma7OncVJXQyt7QLkCH93-3GornuE5_umurvCVffp6T0' \
+  -H 'content-length: 279' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Smile clear politics information girl history city.","maxScore":89,"minScore":19,"description":"Word though could attack instead.","estimatedTime":"2 weeks","previewFileId":"186124bc-d094-477a-a719-a59cacee9682","createdByUserId":"92fc55d0-17ee-41d4-90c0-8992b0353594"}'
